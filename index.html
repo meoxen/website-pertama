@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobuxStore - Beli Robux dengan GoPay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ROBUX<span class="logo-accent">STORE</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="cart.html" class="nav-link">
+                    <span>Cart</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <a href="order.html" class="nav-link">Order</a>
+            </div>
+            <div class="nav-auth" id="navAuth">
+                <a href="login.html" class="btn-secondary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-testid="hero-title">
+                    BELI ROBUX<br>
+                    <span class="gradient-text">CEPAT & AMAN</span>
+                </h1>
+                <p class="hero-subtitle">Top up Robux dengan GoPay. Instan, terpercaya, harga terbaik.</p>
+                <div class="hero-buttons">
+                    <a href="catalog.html" class="btn-primary" data-testid="browse-packages-btn">Browse Packages</a>
+                    <a href="#popular" class="btn-secondary">Lihat Promo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Packages -->
+    <section class="packages-section" id="popular">
+        <div class="container">
+            <h2 class="section-title">Popular Packages</h2>
+            <div class="packages-grid" id="popularPackages">
+                <!-- Packages will be loaded here -->
+                <div class="loading">Loading packages...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">FAST</div>
+                    <h3>Instant Delivery</h3>
+                    <p>Robux langsung masuk ke akun Anda setelah pembayaran berhasil</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">SAFE</div>
+                    <h3>100% Aman</h3>
+                    <p>Transaksi terenkripsi dan terjamin keamanannya</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">BEST</div>
+                    <h3>Harga Terbaik</h3>
+                    <p>Dapatkan bonus Robux di setiap pembelian</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RobuxStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load popular packages
+        loadPopularPackages();
+        updateNavAuth();
+        updateCartBadge();
+    </script>
+</body>
+</html>

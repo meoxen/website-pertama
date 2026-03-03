@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - RobuxStore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ROBUX<span class="logo-accent">STORE</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link active">Catalog</a>
+                <a href="cart.html" class="nav-link">
+                    <span>Cart</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <a href="order.html" class="nav-link">Order</a>
+            </div>
+            <div class="nav-auth" id="navAuth">
+                <a href="login.html" class="btn-secondary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h1 class="page-title" data-testid="catalog-title">Robux Packages</h1>
+                <p class="page-subtitle">Pilih paket yang sesuai dengan kebutuhan Anda</p>
+            </div>
+            
+            <div class="packages-grid" id="catalogPackages" data-testid="packages-grid">
+                <div class="loading">Loading packages...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RobuxStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        loadAllPackages();
+        updateNavAuth();
+        updateCartBadge();
+    </script>
+</body>
+</html>

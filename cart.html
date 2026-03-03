@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - RobuxStore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ROBUX<span class="logo-accent">STORE</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="cart.html" class="nav-link active">
+                    <span>Cart</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <a href="order.html" class="nav-link">Order</a>
+            </div>
+            <div class="nav-auth" id="navAuth">
+                <a href="login.html" class="btn-secondary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="cart-section">
+        <div class="container">
+            <h1 class="page-title" data-testid="cart-title">Shopping Cart</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems" data-testid="cart-items">
+                    <div class="loading">Loading cart...</div>
+                </div>
+                
+                <div class="cart-summary" data-testid="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Total Robux:</span>
+                        <span id="totalRobux" class="gradient-text">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Harga:</span>
+                        <span id="totalPrice">Rp 0</span>
+                    </div>
+                    <button class="btn-primary" id="checkoutBtn" data-testid="checkout-btn" onclick="proceedToCheckout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 RobuxStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        loadCart();
+        updateNavAuth();
+        updateCartBadge();
+    </script>
+</body>
+</html>

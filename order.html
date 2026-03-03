@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Robux - RobuxStore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ROBUX<span class="logo-accent">STORE</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="order.html" class="nav-link active">Order</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="order-section">
+        <div class="container">
+            <div class="order-hero">
+                <h1 class="page-title">Form Order Robux</h1>
+                <p class="page-subtitle">Isi data singkat di bawah ini lalu lanjutkan konfirmasi via WhatsApp.</p>
+            </div>
+
+            <div class="order-layout">
+                <div class="order-form-card">
+                    <div class="form-group">
+                        <label for="username">Username Roblox</label>
+                        <input id="username" type="text" placeholder="contoh: playerkamu123">
+                    </div>
+                    <div class="form-group">
+                        <label for="uid">User ID</label>
+                        <input id="uid" type="text" placeholder="contoh: 12345678">
+                    </div>
+                    <div class="form-group">
+                        <label for="package">Pilih Paket</label>
+                        <select id="package" class="ui-select">
+                            <option>80 Robux - Rp15.000</option>
+                            <option>160 Robux - Rp29.000</option>
+                            <option>400 Robux - Rp70.000</option>
+                            <option>800 Robux - Rp139.000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="note">Catatan (Opsional)</label>
+                        <textarea id="note" rows="4" placeholder="Contoh: kirim setelah jam 7 malam"></textarea>
+                    </div>
+                </div>
+
+                <aside class="order-side-card">
+                    <h3>Langkah Cepat</h3>
+                    <p>1. Isi data order</p>
+                    <p>2. Klik tombol WhatsApp</p>
+                    <p>3. Kirim screenshot pembayaran</p>
+                    <a class="btn-primary wa-btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Lanjut via WhatsApp</a>
+                    <a class="btn-secondary" href="catalog.html">Lihat Semua Paket</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

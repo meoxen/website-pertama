@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RobuxStore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ROBUX<span class="logo-accent">STORE</span></a>
+        </div>
+    </nav>
+
+    <section class="checkout-section">
+        <div class="container">
+            <h1 class="page-title" data-testid="checkout-title">Checkout</h1>
+            
+            <div class="checkout-container">
+                <div class="checkout-card" id="checkoutContent">
+                    <h3>Order Summary</h3>
+                    <div id="orderSummary" data-testid="order-summary"></div>
+                    
+                    <div class="payment-method">
+                        <h3>Metode Pembayaran</h3>
+                        <div class="payment-option selected" data-testid="gopay-payment-option">
+                            <div class="payment-icon">PAY</div>
+                            <div>
+                                <strong>GoPay</strong>
+                                <p>Bayar dengan GoPay wallet</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="checkoutError"></div>
+                    
+                    <button class="btn-primary" id="payBtn" data-testid="pay-now-btn" onclick="processPayment()">Bayar Sekarang</button>
+                </div>
+                
+                <div class="modal" id="paymentModal" style="display: none;">
+                    <div class="modal-content" data-testid="payment-modal">
+                        <div id="paymentModalBody"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        loadCheckoutSummary();
+        updateNavAuth();
+    </script>
+</body>
+</html>
